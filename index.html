@@ -25,6 +25,7 @@
 
 <script type="text/javascript">
     var map = { 79: false, 76: false };
+    var iddqd = "";
     $(document).keydown(function(e) {
         if (e.keyCode in map) {
             map[e.keyCode] = true;
@@ -32,6 +33,10 @@
                 $('.gifContainer').fadeIn();
                 $(document).scrollTop($(document).height());
             }
+        }
+        iddqd = iddqd.substr(-4) + e.key;
+        if (iddqd == "iddqd") {
+          window.location.href = "https://lemonparty.org/";
         }
     }).keyup(function(e) {
         if (e.keyCode in map) {
